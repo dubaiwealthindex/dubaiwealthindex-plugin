@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dubai-wealth-index": {
+      "type": "http",
+      "url": "https://dubaiwealthindex.com/api/mcp"
+    }
+  }
+}

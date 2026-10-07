@@ -1,0 +1,66 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dubai-wealth-index",
+  "version": "1.3.3",
+  "description": "Dubai real estate data from Dubai Wealth Index: compare property sale prices, rents and gross rental yields using Dubai Land Department transactions and Ejari rental contracts. Research apartment buildings, areas and villa communities with source links, data dates and evidence counts.",
+  "author": {
+    "name": "Dubai Wealth Index",
+    "email": "hello@dubaiwealthindex.com",
+    "url": "https://dubaiwealthindex.com"
+  },
+  "homepage": "https://dubaiwealthindex.com/docs/mcp",
+  "license": "MIT",
+  "keywords": [
+    "dubai",
+    "real estate",
+    "property",
+    "rental yield",
+    "roi",
+    "rent",
+    "price per sqft",
+    "apartments",
+    "villas",
+    "off-plan",
+    "dld",
+    "ejari",
+    "transactions",
+    "uae"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Dubai Real Estate by DWI",
+        "shortDescription": "Property prices, rents, yields",
+        "longDescription": "Ask about Dubai property prices, rents and rental yields using registered Dubai Land Department sales and Ejari rental contracts. Dubai Wealth Index (DWI) helps buyers, investors, tenants and property professionals compare buildings, research areas and check property claims with dated, sourced evidence.\n\nLook up a building by its registered or marketing name. Compare two to four buildings on the same bedroom type. Find buildings meeting your price, gross yield and evidence thresholds. Research villa communities, inspect transactions behind the figures, or review your saved buildings and what changed between data editions.\n\nEach quoted figure comes with its source, data date and evidence count. Distinguish building-specific rents from pooled evidence, gross yields from returns after costs, and registered transactions from modelled short-term rental scenarios. Missing figures stay unavailable rather than becoming estimates.\n\nDubai only. Figures describe registered transactions, not live listings or individual-unit valuations. Short-term rental figures use Airbnb asking rates and stated model assumptions. Villa figures are community-level. The plugin cannot book viewings, contact agents or give investment, mortgage, tax or legal advice. Tools are read-only. A Dubai Wealth Index account is required to connect; saved-building access depends on the permissions granted.",
+        "developerName": "Dubai Wealth Index",
+        "category": "Finance",
+        "capabilities": [
+          "Building prices, rents and gross yields",
+          "Full building reports with growth evidence",
+          "Area and villa community records",
+          "Screen and compare buildings",
+          "Check a yield claim against registered records",
+          "Transactions behind each median",
+          "Your saved buildings and what changed"
+        ],
+        "websiteURL": "https://dubaiwealthindex.com",
+        "supportURL": "https://dubaiwealthindex.com/contact",
+        "privacyPolicyURL": "https://dubaiwealthindex.com/privacy",
+        "termsOfServiceURL": "https://dubaiwealthindex.com/terms",
+        "defaultPrompt": [
+          "What does a 1-bedroom in Vera Tower, Business Bay rent for and yield?",
+          "Which Dubai Marina buildings have the highest gross rental yields?",
+          "An agent says Vera Tower yields 9%. What do registered records support?"
+        ],
+        "brandColor": "#173E32",
+        "brandColorDark": "#7FB89F",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "publication": {
+        "release_notes": "1.3.3: Public source repository, MIT license, and a README describing the data the plugin sends. 1.3.2: Verified setup workflow, clearer connection and skill-loading states, safer identity resolution, pooled-rent provenance, comparable yield bases, and edition-change interpretation. Clearer directory name and listing describing Dubai real estate research, property prices, rents and yields."
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dubai-wealth-index",
+  "description": "Registered Dubai property data for Claude: prices, rents and yields from Dubai Land Department and Ejari records.",
+  "owner": {
+    "name": "Dubai Wealth Index",
+    "email": "hello@dubaiwealthindex.com",
+    "url": "https://dubaiwealthindex.com"
+  },
+  "plugins": [
+    {
+      "name": "dubai-wealth-index",
+      "source": "./",
+      "description": "Dubai real estate data from Dubai Wealth Index: compare property sale prices, rents and gross rental yields using Dubai Land Department transactions and Ejari rental contracts. Research apartment buildings, areas and villa communities with source links, data dates and evidence counts.",
+      "version": "1.3.3"
+    }
+  ]
+}
