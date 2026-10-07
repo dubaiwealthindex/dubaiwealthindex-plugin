@@ -1,14 +1,17 @@
-# Dubai Real Estate by DWI
+# Dubai Real Estate Data — Dubai Wealth Index plugin
 
-Research Dubai property with registered figures instead of asking prices.
+Dubai real estate data for Claude, ChatGPT, Cursor and Grok: registered
+property sale prices, rents and rental yields for every published Dubai
+apartment building, area and villa community.
+
 [Dubai Wealth Index](https://dubaiwealthindex.com) publishes median sale prices
-from Dubai Land Department transactions, median rents from Ejari rental
-contracts, and the gross rental yields between them, for apartment buildings,
-areas and villa communities. Every figure carries its bedroom type, period, data
-date and the number of transactions behind it.
+from Dubai Land Department (DLD) transactions, median rents from Ejari rental
+contracts, and the gross rental yields between them. These are recorded
+prices, not asking prices or listings. Every figure carries its bedroom type,
+period, data date and the number of transactions behind it.
 
-This plugin connects Claude to that data over MCP and adds skills that tell
-Claude how to quote it correctly.
+This plugin connects your AI assistant to that data over MCP and adds skills
+that tell it how to quote the figures correctly.
 
 ## What you can ask
 
