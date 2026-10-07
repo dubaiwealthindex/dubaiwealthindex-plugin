@@ -1,0 +1,33 @@
+name: Bug report
+description: A skill gives wrong guidance, the plugin fails to load, or a tool does not behave as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste sign-in links, codes or tokens.** An issue is public
+        immediately.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you asked, what you got, what you expected.
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: Client
+      description: Claude Code, claude.ai, Claude Desktop, ChatGPT, or another MCP client, with its version.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: The `version` in `.claude-plugin/plugin.json`.
+    validations:
+      required: false

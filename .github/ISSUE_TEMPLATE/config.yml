@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://dubaiwealthindex.com/docs/mcp
+    about: Connecting the MCP server, the tool reference and the methodology.
+  - name: Account or data questions
+    url: https://dubaiwealthindex.com/contact
+    about: Use the contact page. An issue here is public, and those questions are not.
+  - name: Security vulnerability
+    url: https://github.com/dubaiwealthindex/dubaiwealthindex-plugin/blob/main/SECURITY.md
+    about: Report privately by email. Never in an issue.
