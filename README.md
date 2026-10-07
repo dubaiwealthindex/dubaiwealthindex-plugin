@@ -26,7 +26,9 @@ Claude how to quote it correctly.
 | `.claude-plugin/marketplace.json` | Marketplace entry, so this repo can be added as a Claude Code marketplace |
 | `.mcp.json` | The remote MCP server, `https://dubaiwealthindex.com/api/mcp` |
 | `skills/` | Six skills: get started, cite a figure, building report, shortlist and compare, check a claim, track saved buildings |
-| `plugin.json`, `mcp.json` | The same plugin in the [Agent Plugins](https://agent-plugins.org) format, for ChatGPT and other clients |
+| `plugin.json`, `mcp.json` | The same plugin in the [Agent Plugins](https://agent-plugins.org) format, for ChatGPT, Codex and other clients |
+| `.cursor-plugin/` | Cursor manifest and marketplace entry |
+| `.grok-plugin/` | Grok manifest |
 | `assets/` | Icon |
 
 The skills are plain Markdown instructions. The plugin ships no scripts, hooks
@@ -40,6 +42,14 @@ or executables and installs no packages.
 claude plugin marketplace add dubaiwealthindex/dubaiwealthindex-plugin
 claude plugin install dubai-wealth-index@dubai-wealth-index
 ```
+
+**Cursor** — add this repository from the Cursor plugin marketplace, or point
+Cursor at it as a plugin repository.
+
+**Grok** — `grok` loads it from `~/.grok/plugins/`, or pass the cloned
+repository with `--plugin-dir`.
+
+**ChatGPT and Codex** — use the root `plugin.json` and `mcp.json`.
 
 **Any MCP client, without the skills**
 

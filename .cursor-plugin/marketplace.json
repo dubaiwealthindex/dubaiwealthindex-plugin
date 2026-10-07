@@ -1,0 +1,14 @@
+{
+  "name": "dubai-wealth-index",
+  "owner": {
+    "name": "Dubai Wealth Index",
+    "email": "hello@dubaiwealthindex.com",
+    "url": "https://dubaiwealthindex.com"
+  },
+  "plugins": [
+    {
+      "name": "dubai-wealth-index",
+      "source": "./"
+    }
+  ]
+}
