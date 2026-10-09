@@ -1,6 +1,6 @@
 {
   "name": "dubai-wealth-index",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "Dubai real estate data from Dubai Wealth Index: compare property sale prices, rents and gross rental yields using Dubai Land Department transactions and Ejari rental contracts. Research apartment buildings, areas and villa communities with source links, data dates and evidence counts.",
   "logo": "assets/icon.png",
   "author": {

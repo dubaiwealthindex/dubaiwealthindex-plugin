@@ -48,6 +48,13 @@ Explicit user instructions take priority over this guidance.
 - A screen across the city: buildings above a yield floor or inside a price band.
 - A side-by-side comparison of two to four buildings on the same bedroom type.
 - A published ranking, or the individual transactions behind a median.
+- Offices and shops: achieved prices, rents, yields, liquidity and leasing
+  demand by area.
+- Off-plan: any registered project's progress, planned and recorded dates,
+  launch prices and developer; which areas' launches resold highest; late
+  handovers; developers ranked on delivery; the citywide price index.
+- Short-term rentals: which buildings in an area out-earn the registered lease
+  on Airbnb, the break-even occupancy, and short- versus long-let yield.
 - Whether an agent's or developer's claimed yield holds up against registered
   records.
 - The user's saved buildings, and what changed in them since an earlier edition.
@@ -71,6 +78,7 @@ Offer one of these, adapted to what the user mentioned:
 - "What does a 1-bedroom in Vera Tower, Business Bay rent for and yield?"
 - "Which Dubai Marina buildings have the highest gross rental yields?"
 - "Is a 9% yield in Vera Tower realistic?"
+- "What is best for short-term rental in Business Bay?"
 - "Compare 3-bedroom villa rents in Arabian Ranches and The Springs."
 
 Do not quote a figure from memory; figures come only from tool results.

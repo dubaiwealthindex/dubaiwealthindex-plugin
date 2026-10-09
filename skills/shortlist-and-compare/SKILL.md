@@ -22,6 +22,9 @@ ambiguous candidates before comparing or filtering on their identities.
 - "Best yields in <area>" without thresholds: `get_area` sorted by yield, or a
   published ranking (`list_rankings`, then `get_ranking` with the area).
   A ranking lists outliers and needs ten qualifying buildings; say so.
+- "Best for short term / Airbnb in <area>": `get_ranking` with
+  `best-short-term-premium` and the area — it lists every qualifying building
+  with the lease comparison. Follow the short-term-rental skill.
 - Say plainly that thresholds apply to **registered medians**, not to
   apartments currently for sale, and that buildings below the publication gate
   cannot appear.
@@ -34,6 +37,9 @@ ambiguous candidates before comparing or filtering on their identities.
 - Villa communities: call `get_villa_community` once per community, same
   purpose and bedroom count.
 - Areas: `get_area` per area on the same purpose and bedroom type.
+- Offices or shops: `get_commercial` without an area ranks every commercial
+  area (by yield, sales, price, demand or liquidity); `assetClass` picks
+  offices or shops. Commercial has no building grain — say so if asked.
 
 ## Optional market context
 

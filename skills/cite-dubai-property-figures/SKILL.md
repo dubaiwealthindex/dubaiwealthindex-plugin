@@ -31,15 +31,22 @@ for a different format or a narrower answer, follow the user.
 | One building, every unit size (a report) | `get_building` with `detail: "report"` |
 | Every building in an area | `get_area` |
 | A villa community | `get_villa_community` |
+| Offices or shops (commercial, retail), one area or the best areas | `get_commercial` (`area` for one; `sort` to rank) |
+| One off-plan or development project ("is it on track?", launch price, developer) | `get_project` (name is enough; area optional) |
+| Off-plan market: best area, launch-to-resale uplift, live projects, late handovers | `get_offplan` (`area`, `view: "handovers"`) |
+| A developer's delivery record, or the best developers | `get_developer` |
+| Is the market rising, how far from the peak | `get_price_index` |
 | "Which buildings…" against thresholds | `screen_buildings` |
 | Two to four buildings side by side | `compare_buildings` |
 | A published top list | `list_rankings`, then `get_ranking` |
+| Short term, Airbnb, holiday home, short vs long let (area or city) | `get_ranking` `best-short-term-premium` with `area` — see the short-term-rental skill |
 | Whether a median rests on enough sales | `get_building_transactions` |
 | Citywide picture, choosing where to drill in | `get_city_overview` |
 | How a figure is defined | `get_methodology` |
 | The user's saved buildings | `list_favorites` (`since` for what changed) |
 | What changed since an earlier edition | `whats_new` with `since` |
 | Pages no typed tool covers (off-plan projects, developers) | `search`, then `fetch` |
+| Any dubaiwealthindex.com URL a response links to | `fetch` — not a web browser |
 
 Ask a follow-up only when a required input is missing, for example the bedroom
 type when the user asks for "the yield" of a building that publishes several.
