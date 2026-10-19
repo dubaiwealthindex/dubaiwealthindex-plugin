@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dubai-wealth-index",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "description": "Dubai real estate data from Dubai Wealth Index: compare property sale prices, rents and gross rental yields using Dubai Land Department transactions and Ejari rental contracts. Research apartment buildings, areas and villa communities with source links, data dates and evidence counts.",
   "author": {
     "name": "Dubai Wealth Index",
@@ -31,12 +31,13 @@
       "interface": {
         "displayName": "Dubai Real Estate by DWI",
         "shortDescription": "Property prices, rents, yields",
-        "longDescription": "Ask about Dubai property prices, rents and rental yields using registered Dubai Land Department sales and Ejari rental contracts. Dubai Wealth Index (DWI) helps buyers, investors, tenants and property professionals compare buildings, research areas and check property claims with dated, sourced evidence.\n\nLook up a building by its registered or marketing name. Compare two to four buildings on the same bedroom type. Find buildings meeting your price, gross yield and evidence thresholds. Research villa communities, inspect transactions behind the figures, or review your saved buildings and what changed between data editions.\n\nEach quoted figure comes with its source, data date and evidence count. Distinguish building-specific rents from pooled evidence, gross yields from returns after costs, and registered transactions from modelled short-term rental scenarios. Missing figures stay unavailable rather than becoming estimates.\n\nDubai only. Figures describe registered transactions, not live listings or individual-unit valuations. Short-term rental figures use Airbnb asking rates and stated model assumptions. Villa figures are community-level. The plugin cannot book viewings, contact agents or give investment, mortgage, tax or legal advice. Tools are read-only. A Dubai Wealth Index account is required to connect; saved-building access depends on the permissions granted.",
+        "longDescription": "Ask about Dubai property prices, rents and rental yields using registered Dubai Land Department sales and Ejari rental contracts. Dubai Wealth Index (DWI) helps buyers, investors, tenants and property professionals compare buildings, research areas and check property claims with dated, sourced evidence.\n\nLook up a building by its registered or marketing name. Compare two to four buildings on the same bedroom type. Find buildings meeting your price, gross yield and evidence thresholds. Check an apartment's or villa's asking price against registered sales of similar units in the same building or community. Research villa communities, inspect transactions behind the figures, or review your saved buildings and what changed between data editions.\n\nEach quoted figure comes with its source, data date and evidence count. Distinguish building-specific rents from pooled evidence, gross yields from returns after costs, and registered transactions from modelled short-term rental scenarios. Missing figures stay unavailable rather than becoming estimates.\n\nDubai only. Figures describe registered transactions, not live listings; an asking price is judged against registered sales of similar units. Short-term rental figures use Airbnb asking rates and stated model assumptions. Villa figures are community-level. When you want to buy, rent or view a property, the plugin can send your enquiry to Dubai Wealth Index, which replies and introduces a licensed agent, after you confirm; every other tool is read-only. It gives no investment, mortgage, tax or legal advice. A Dubai Wealth Index account is required to connect; saved-building access depends on the permissions granted.",
         "developerName": "Dubai Wealth Index",
         "category": "Finance",
         "capabilities": [
           "Building prices, rents and gross yields",
           "Full building reports with growth evidence",
+          "Check an asking price, apartment or villa: fair range, verdict, cash and return",
           "Area and villa community records",
           "Screen and compare buildings",
           "Check a yield claim against registered records",
@@ -45,7 +46,8 @@
           "Office and shop prices, rents and yields by area",
           "Off-plan projects, handovers and developer delivery records",
           "Dubai apartment price index",
-          "Your saved buildings and what changed"
+          "Your saved buildings and what changed",
+          "Request info from a licensed agent"
         ],
         "websiteURL": "https://dubaiwealthindex.com",
         "supportURL": "https://dubaiwealthindex.com/contact",

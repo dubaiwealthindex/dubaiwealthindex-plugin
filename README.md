@@ -19,6 +19,8 @@ that tell it how to quote the figures correctly.
 - "Which Dubai Marina buildings have the highest gross rental yields?"
 - "Compare Vera Tower with 23 Marina for a 2-bedroom."
 - "An agent says this building yields 9%. What do registered records support?"
+- "Is AED 2.35M a fair price for a 2-bedroom in Executive Tower G? What should I offer?"
+- "Is AED 5.6M fair for a 3-bed Palmera villa in Arabian Ranches?"
 - "Show my saved buildings and what changed since the last data edition."
 
 ## What is in here
@@ -28,7 +30,7 @@ that tell it how to quote the figures correctly.
 | `.claude-plugin/plugin.json` | Claude plugin manifest |
 | `.claude-plugin/marketplace.json` | Marketplace entry, so this repo can be added as a Claude Code marketplace |
 | `.mcp.json` | The remote MCP server, `https://dubaiwealthindex.com/api/mcp` |
-| `skills/` | Six skills: get started, cite a figure, building report, shortlist and compare, check a claim, track saved buildings |
+| `skills/` | Nine skills: get started, cite a figure, building report, shortlist and compare, check a claim, check an asking price, track saved buildings, short-term rental, request info |
 | `plugin.json`, `mcp.json` | The same plugin in the [Agent Plugins](https://agent-plugins.org) format, for ChatGPT, Codex and other clients |
 | `.cursor-plugin/` | Cursor manifest and marketplace entry |
 | `.grok-plugin/` | Grok manifest |
@@ -67,7 +69,10 @@ On claude.ai, add `https://dubaiwealthindex.com/api/mcp` as a custom connector.
 Connecting opens a browser sign-in to your Dubai Wealth Index account (OAuth
 2.1). There is no API key to copy. The plugin requests read access to property
 data and, if you allow it, read access to the buildings you saved on the site.
-Every tool is read-only: it cannot change your account or saved buildings.
+Every tool but one is read-only. `request_info` sends an enquiry you confirm
+(your account's name and email, plus a phone number if you give one) to Dubai
+Wealth Index, which replies and introduces a licensed agent; it cannot change
+your account or saved buildings.
 
 The plugin talks to one server, `dubaiwealthindex.com`. When Claude calls a tool,
 the tool's arguments, such as a building name, an area or a bedroom type, are
@@ -78,11 +83,13 @@ or your machine is sent. See the [privacy policy](https://dubaiwealthindex.com/p
 
 ## Scope
 
-Dubai only. Figures describe registered transactions, not live listings or
-individual-unit valuations. Villas are published per community. Short-term
-rental figures use Airbnb asking rates and stated model assumptions. The plugin
-cannot book viewings, contact agents, or give investment, mortgage, tax or legal
-advice.
+Dubai only. Figures describe registered transactions, not live listings. An
+asking price is checked against registered sales of similar units: in the same
+building for an apartment, in the same community (and phase) for a villa.
+Villas are published per community. Short-term
+rental figures use Airbnb asking rates and stated model assumptions. To buy,
+rent or view, the plugin sends your enquiry to Dubai Wealth Index, which replies
+and introduces a licensed agent. It gives no investment, mortgage, tax or legal advice.
 
 ## Support
 

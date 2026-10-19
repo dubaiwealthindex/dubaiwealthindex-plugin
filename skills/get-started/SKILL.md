@@ -31,7 +31,7 @@ Explicit user instructions take priority over this guidance.
 - Dubai Wealth Index publishes **registered** Dubai property figures: median
   sale prices from Dubai Land Department transactions and median rents from
   Ejari rental contracts. They are recorded prices, not asking prices or
-  valuations.
+  appraisals.
 - Apartments are published per building and per area. Villas and townhouses on
   plot titles are published per community, because the register records no
   building for a villa.

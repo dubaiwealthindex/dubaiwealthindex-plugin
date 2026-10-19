@@ -66,7 +66,7 @@ Then apply these rules:
 - Yields are **gross**, before service charge, agency fees, maintenance and
   vacant months. Never call one a net return.
 - Rents are registered contracts, not asking rents. Prices are recorded
-  transactions, not valuations.
+  transactions, not appraisals.
 - Short-term rental figures rest on an occupancy **assumption**. State the
   assumption returned by the tool whenever you quote a short-term figure.
 - A difference between two yields is in percentage points, not percent.
