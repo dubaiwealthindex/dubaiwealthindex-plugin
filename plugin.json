@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dubai-wealth-index",
-  "version": "1.7.0",
-  "description": "Dubai real estate data from Dubai Wealth Index: compare property sale prices, rents and gross rental yields using Dubai Land Department transactions and Ejari rental contracts. Research apartment buildings, areas and villa communities with source links, data dates and evidence counts.",
+  "version": "1.8.1",
+  "description": "Dubai property prices, rents and rental yields from registered Dubai Land Department sales and Ejari leases. Check an asking price, compare apartment buildings, research areas, villa communities and off-plan projects, and test short-term rental returns. Every figure is dated, sourced and counted.",
   "author": {
     "name": "Dubai Wealth Index",
     "email": "hello@dubaiwealthindex.com",
@@ -14,14 +14,22 @@
     "dubai",
     "real estate",
     "property",
+    "dubai property prices",
     "rental yield",
     "roi",
     "rent",
     "price per sqft",
+    "asking price",
+    "property valuation",
     "apartments",
     "villas",
     "off-plan",
+    "short-term rental",
+    "airbnb",
+    "holiday home",
+    "price index",
     "dld",
+    "dubai land department",
     "ejari",
     "transactions",
     "uae"
@@ -29,7 +37,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Dubai Real Estate by DWI",
+        "displayName": "Dubai Wealth Index Real Estate",
         "shortDescription": "Property prices, rents, yields",
         "longDescription": "Ask about Dubai property prices, rents and rental yields using registered Dubai Land Department sales and Ejari rental contracts. Dubai Wealth Index (DWI) helps buyers, investors, tenants and property professionals compare buildings, research areas and check property claims with dated, sourced evidence.\n\nLook up a building by its registered or marketing name. Compare two to four buildings on the same bedroom type. Find buildings meeting your price, gross yield and evidence thresholds. Check an apartment's or villa's asking price against registered sales of similar units in the same building or community. Research villa communities, inspect transactions behind the figures, or review your saved buildings and what changed between data editions.\n\nEach quoted figure comes with its source, data date and evidence count. Distinguish building-specific rents from pooled evidence, gross yields from returns after costs, and registered transactions from modelled short-term rental scenarios. Missing figures stay unavailable rather than becoming estimates.\n\nDubai only. Figures describe registered transactions, not live listings; an asking price is judged against registered sales of similar units. Short-term rental figures use Airbnb asking rates and stated model assumptions. Villa figures are community-level. When you want to buy, rent or view a property, the plugin can send your enquiry to Dubai Wealth Index, which replies and introduces a licensed agent, after you confirm; every other tool is read-only. It gives no investment, mortgage, tax or legal advice. A Dubai Wealth Index account is required to connect; saved-building access depends on the permissions granted.",
         "developerName": "Dubai Wealth Index",
@@ -65,7 +73,7 @@
       },
       "onboardingSkill": "./skills/get-started/SKILL.md",
       "publication": {
-        "release_notes": "1.4.0: Off-plan projects, the off-plan market and handovers (get_project, get_offplan), developer delivery records (get_developer), the price index (get_price_index), offices and shops by area (get_commercial); short-term rental answers per area — which buildings out-earn the registered lease on Airbnb, break-even occupancy, and short- versus long-let yield on the same price — plus a short-term-rental skill. Short-term figures now assume 70% occupancy. 1.3.3: Public source repository, MIT license, and a README describing the data the plugin sends. 1.3.2: Verified setup workflow, clearer connection and skill-loading states, safer identity resolution, pooled-rent provenance, comparable yield bases, and edition-change interpretation. Clearer directory name and listing describing Dubai real estate research, property prices, rents and yields."
+        "release_notes": "1.8.1: Listing renamed Dubai Wealth Index Real Estate; the description now covers asking-price checks, off-plan projects and short-term rentals. 1.8.0: When an account reaches a daily limit, results now state plainly what is limited, when it resets and what still works. 1.4.0: Off-plan projects, the off-plan market and handovers (get_project, get_offplan), developer delivery records (get_developer), the price index (get_price_index), offices and shops by area (get_commercial); short-term rental answers per area — which buildings out-earn the registered lease on Airbnb, break-even occupancy, and short- versus long-let yield on the same price — plus a short-term-rental skill. Short-term figures now assume 70% occupancy. 1.3.3: Public source repository, MIT license, and a README describing the data the plugin sends. 1.3.2: Verified setup workflow, clearer connection and skill-loading states, safer identity resolution, pooled-rent provenance, comparable yield bases, and edition-change interpretation. Clearer directory name and listing describing Dubai real estate research, property prices, rents and yields."
       }
     }
   }
