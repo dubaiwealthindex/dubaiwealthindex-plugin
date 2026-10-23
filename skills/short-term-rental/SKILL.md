@@ -5,9 +5,9 @@ description: Answer Dubai short-term rental questions — Airbnb, holiday home, 
 
 # Short-term rentals in Dubai
 
-Explicit user instructions take priority over this workflow. Stay on this
-server: every short-term figure the website shows is returned by these tools,
-and `fetch` reads any dubaiwealthindex.com page a response links to.
+Explicit user instructions take priority over this workflow. Every
+short-term figure the website shows is returned by these tools, and `fetch`
+reads any dubaiwealthindex.com page a response links to.
 
 ## 1. Pick the call
 
