@@ -37,8 +37,10 @@ Explicit user instructions take priority over this guidance.
   building for a villa.
 - Every figure carries its bedroom type, unit, period, data date and the number
   of transactions behind it.
-- All tools are read-only. Signing in also lets it read the buildings the user
-  has saved on dubaiwealthindex.com.
+- Every tool reads, except `request_info`, which sends an enquiry the user
+  has confirmed to Dubai Wealth Index. Signing in also lets it read the
+  buildings the user has saved on dubaiwealthindex.com; it cannot save or
+  remove them.
 
 ## What it can answer
 
@@ -58,6 +60,8 @@ Explicit user instructions take priority over this guidance.
 - Whether an agent's or developer's claimed yield holds up against registered
   records.
 - The user's saved buildings, and what changed in them since an earlier edition.
+- An enquiry to a licensed agent about a property, sent only after the user
+  confirms it (`request_info`).
 
 - Registered apartment sales activity: counts, transaction values, price ranges
   and evidenced year-over-year change by area and bedroom.
@@ -66,9 +70,9 @@ Explicit user instructions take priority over this guidance.
 
 ## What it cannot do
 
-Say so plainly if asked: it holds no listings, cannot book viewings or contact
-agents, covers Dubai only, and does not give investment, mortgage, tax or legal
-advice. Yields are gross, and short-term rental figures are modelled from a
+Say so plainly if asked: it holds no listings, cannot book a viewing itself
+(`request_info` passes the request on, and someone replies), covers Dubai only,
+and does not give investment, mortgage, tax or legal advice. Yields are gross, and short-term rental figures are modelled from a
 stated occupancy assumption.
 
 ## Suggested first questions
@@ -85,7 +89,7 @@ Do not quote a figure from memory; figures come only from tool results.
 
 Residential service-charge budgets are available through `get_service_charge_budgets`.
 Preserve the property-group identity, budget year, source date and returned units.
-Unit labels and `perSqftTotal` follow the index's ADR-0004 interpretation of source
+Unit labels and `perSqftTotal` are the index's interpretation of the source
 categories; the source export itself has no unit column. A name match is not a
 verified building match. Use the building record's `afterServiceCharge` for its
 matched charge; this deducts service charge only and is not a fully net return.

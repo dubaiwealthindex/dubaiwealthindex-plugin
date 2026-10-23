@@ -27,8 +27,8 @@ Explicit user instructions take priority over this workflow.
    building or a thin grain, call `get_building_transactions` and describe the
    spread of actual deals.
    Preserve building versus pooled rent evidence and the returned data date.
-   Link each canonical source. Budget units follow the index's ADR-0004
-   interpretation. Use the building record's matched `afterServiceCharge`
+   Link each canonical source. Service-charge budget units are the index's
+   interpretation of the source categories. Use the building record's matched `afterServiceCharge`
    adjustment, which still excludes other operating and finance costs.
 5. **Verdict.** Say whether registered records support, contradict or cannot
    test the claim, and by how much (percentage points for yields). Do not

@@ -16,7 +16,8 @@ Explicit user instructions take priority over this workflow.
 3. **Ask how to reach them.** The account's name and email are always sent.
    Ask whether they also want a call or WhatsApp, and on which number.
 4. **Confirm, then send.** Say what will be sent and to whom (Dubai Wealth
-   Index, which replies and introduces a licensed agent), get a yes, then call
+   Index, which replies and introduces a licensed agent, and may pass the
+   enquiry to the licensed brokerage it works with), get a yes, then call
    `request_info` with
    `consent: true`. Never call it on your own initiative.
 5. **Report back.** Give the reference, who it went to (`sentTo`), and the

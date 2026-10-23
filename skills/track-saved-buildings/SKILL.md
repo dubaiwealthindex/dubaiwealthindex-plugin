@@ -23,6 +23,6 @@ Explicit user instructions take priority over this workflow.
    If no buildings are saved, say so and link https://dubaiwealthindex.com/account. Never
    invent a previous edition or call an unavailable figure zero. Cite record
    URLs with the bedroom type, evidence counts and both dates.
-4. The tools are read-only: to add or remove a saved building, point the user
+4. No tool saves or removes a building: to add or remove one, point the user
    to dubaiwealthindex.com. If `list_favorites` reports a missing scope, ask
    the user to reconnect and allow saved buildings.

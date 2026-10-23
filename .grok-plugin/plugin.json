@@ -1,12 +1,11 @@
 {
   "name": "dubai-wealth-index",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Dubai property prices, rents and rental yields from registered Dubai Land Department sales and Ejari leases. Check an asking price, compare apartment buildings, research areas, villa communities and off-plan projects, and test short-term rental returns. Every figure is dated, sourced and counted.",
   "logo": "assets/icon.png",
   "author": {
     "name": "Dubai Wealth Index",
-    "email": "hello@dubaiwealthindex.com",
-    "url": "https://dubaiwealthindex.com"
+    "email": "hello@dubaiwealthindex.com"
   },
   "homepage": "https://dubaiwealthindex.com/docs/mcp",
   "repository": "https://github.com/dubaiwealthindex/dubaiwealthindex-plugin",

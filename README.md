@@ -23,6 +23,24 @@ that tell it how to quote the figures correctly.
 - "Is AED 5.6M fair for a 3-bed Palmera villa in Arabian Ranches?"
 - "Show my saved buildings and what changed since the last data edition."
 
+## Tools and prompts
+
+The server at `https://dubaiwealthindex.com/api/mcp` serves 26 tools and 5
+prompts. Every tool reads, except `request_info`.
+
+| | Tools |
+| --- | --- |
+| Find and read records | `search`, `fetch`, `get_building`, `get_building_transactions`, `get_area`, `get_villa_community`, `get_city_overview` |
+| Prices, screens and rankings | `check_property`, `compare_buildings`, `screen_buildings`, `get_ranking`, `list_rankings` |
+| Off-plan and developers | `get_project`, `get_offplan`, `get_developer`, `get_price_index`, `get_supply_pipeline` |
+| Market and costs | `get_market_activity`, `get_market_signals`, `get_commercial`, `get_service_charge_budgets` |
+| Definitions and editions | `get_methodology`, `whats_new` |
+| Your account (read) | `whoami`, `list_favorites` |
+| Enquiry (writes, after you confirm) | `request_info` |
+
+Prompts: `evaluate_building`, `compare_areas`, `find_high_yield`,
+`short_let_vs_lease`, `cite_figure`.
+
 ## What is in here
 
 | Path | |
@@ -32,9 +50,10 @@ that tell it how to quote the figures correctly.
 | `.mcp.json` | The remote MCP server, `https://dubaiwealthindex.com/api/mcp` |
 | `skills/` | Nine skills: get started, cite a figure, building report, shortlist and compare, check a claim, check an asking price, track saved buildings, short-term rental, request info |
 | `plugin.json`, `mcp.json` | The same plugin in the [Agent Plugins](https://agent-plugins.org) format, for ChatGPT, Codex and other clients |
+| `.codex-plugin/plugin.json` | Codex fallback manifest; the OpenAI settings in `plugin.json` take precedence |
 | `.cursor-plugin/` | Cursor manifest and marketplace entry |
 | `.grok-plugin/` | Grok manifest |
-| `assets/` | Icon |
+| assets/ | Icon and logo |
 
 The skills are plain Markdown instructions. The plugin ships no scripts, hooks
 or executables and installs no packages.
@@ -54,7 +73,8 @@ Cursor at it as a plugin repository.
 **Grok** — `grok` loads it from `~/.grok/plugins/`, or pass the cloned
 repository with `--plugin-dir`.
 
-**ChatGPT and Codex** — use the root `plugin.json` and `mcp.json`.
+**ChatGPT and Codex** — use the root `plugin.json` and `mcp.json`
+(`.codex-plugin/plugin.json` is the Codex fallback).
 
 **Any MCP client, without the skills**
 
@@ -69,17 +89,24 @@ On claude.ai, add `https://dubaiwealthindex.com/api/mcp` as a custom connector.
 Connecting opens a browser sign-in to your Dubai Wealth Index account (OAuth
 2.1). There is no API key to copy. The plugin requests read access to property
 data and, if you allow it, read access to the buildings you saved on the site.
-Every tool but one is read-only. `request_info` sends an enquiry you confirm
-(your account's name and email, plus a phone number if you give one) to Dubai
-Wealth Index, which replies and introduces a licensed agent; it cannot change
-your account or saved buildings.
 
-The plugin talks to one server, `dubaiwealthindex.com`. When Claude calls a tool,
-the tool's arguments, such as a building name, an area or a bedroom type, are
-sent to that server. Dubai Wealth Index records each tool call in its product
-analytics (PostHog): the tool name, its arguments, timing, errors, the AI
-client's name and your account identifier. Nothing else from your conversation
-or your machine is sent. See the [privacy policy](https://dubaiwealthindex.com/privacy).
+25 of the 26 tools only read. `request_info` is the one that writes, and only
+after you confirm: it stores an enquiry with Dubai Wealth Index holding your
+account's name and email, the property, any bedroom type, message and phone
+number you give, and the name of the AI app that sent it. Dubai Wealth Index
+replies by phone, WhatsApp or email and puts you in touch with a licensed agent,
+so the enquiry may be passed to the licensed brokerage it works with. It cannot
+change your account or saved buildings.
+
+The plugin talks to one server, `dubaiwealthindex.com`. When the assistant calls
+a tool, the tool's arguments, such as a building name, an area or a bedroom
+type, are sent to that server. Dubai Wealth Index records each tool call in its
+product analytics (PostHog): the tool name, its arguments, timing, errors, the
+size of the result, the AI app's name, the connection's client ID and your
+account identifier. The name, phone number and message given to `request_info`
+are left out of analytics, and tool results are not recorded. Nothing else from
+your conversation or your machine is sent. See the
+[privacy policy](https://dubaiwealthindex.com/privacy).
 
 ## Scope
 
